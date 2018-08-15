@@ -50,7 +50,16 @@ A kitchen has many items.
     rack, and cinnamon, nutmeg, and vanilla on another shelf.
 
 ```json
-<!-- your answer here -->
+
+"kitchen": {
+    "cupboard": ["bowls", "plates"],
+    "electric_stove": ["small", "medium", "large", "extra large"],
+    "herbs_spices": {
+        "1": ["chives", "lemon grass", "mint"],
+        "2": ["cinnamon", "nutmeg", "vanilla"]
+        }
+}
+
 ```
 
 ## Modeling Data Using JSON: Part II
@@ -62,7 +71,20 @@ delicious apple.
 Copy the JSON that you wrote for the previous question and include the new information about the kitchen.
 
 ```json
-<!-- your answer here -->
+
+"kitchen": {
+    "cupboard": ["bowls", "plates"],
+    "electric_stove": ["small", "medium", "large", "extra large"],
+    "herbs_spices": {
+        "1": ["chives", "lemon grass", "mint"],
+        "2": ["cinnamon", "nutmeg", "vanilla"]
+        },
+    "apple_cultivar": {
+        "Fuji apples": "2",
+        "Gala apples": "7",
+        "Golden delicious": "1"
+    }
+}
 ```
 
 ## JSON Methods
@@ -70,7 +92,24 @@ Copy the JSON that you wrote for the previous question and include the new infor
 Can you write a method in the JSON that you wrote above?
 
 ```json
-<!-- your answer here -->
+"kitchen": {
+    "cupboard": ["bowls", "plates"],
+    "electric_stove": ["small", "medium", "large", "extra large"],
+    "herbs_spices": {
+        "1": ["chives", "lemon grass", "mint"],
+        "2": ["cinnamon", "nutmeg", "vanilla"]
+        },
+    "apple_cultivar": {
+        "Fuji_apples": "2",
+        "Gala_apples": "7",
+        "Golden_delicious": "1"
+    },
+    toString() {
+    return `{There are "${this.apple_cultivar.Fuji_apples}" in the kitchen}`
+  }
+}
+
+
 ```
 
 ## JSON Comments
@@ -78,5 +117,21 @@ Can you write a method in the JSON that you wrote above?
 Can you write comments in the JSON that you wrote above?
 
 ```json
-<!-- your answer here -->
+"kitchen": {
+    "cupboard": ["bowls", "plates"],
+    "electric_stove": ["small", "medium", "large", "extra large"],
+    "herbs_spices": {
+        "1": ["chives", "lemon grass", "mint"],
+        "2": ["cinnamon", "nutmeg", "vanilla"]
+        },
+    "apple_cultivar": {
+        "Fuji_apples": "2",
+        "Gala_apples": "7",
+        "Golden_delicious": "1"
+    },
+    toString() {
+    return `{There are "${this.apple_cultivar.Fuji_apples}" Fuji Apples in the kitchen}`
+    // There are 2 Fuji Apples in the kitchen
+  }
+}
 ```
